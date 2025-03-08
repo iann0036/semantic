@@ -76,21 +76,6 @@ test-suite test
     , tasty
     , tree-sitter-ruby ^>= 0.5.0.2
 
-executable benchmarks
-  import:              haskell
-  hs-source-dirs:      bench
-  -- type:                exitcode-stdio-1.0
-  main-is:             Main.hs
-  other-modules:       Parsing
-  ghc-options:         -static -threaded -rtsopts "-with-rtsopts=-N -A4m -n2m"
-  build-depends:
-    , base
-    , bytestring
-    , gauge ^>= 0.2.5
-    , Glob
-    , semantic-ast
-    , semantic-ruby
-
 executable tree-sitter-ruby
   import: haskell
   hs-source-dirs:      app
