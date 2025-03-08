@@ -40,7 +40,7 @@ jobs:
 
     - name: Get cabal-cache
       run: |
-        curl -L  https://github.com/haskell/cabal-cache//releases/download/v1.2.0.0/cabal-cache_x86_64_linux.tar.gz > ./cc.tar.gz
+        curl -L https://github.com/haskell/cabal-cache/releases/download/v1.2.0.0/cabal-cache-x86_64-linux.tar.gz > ./cc.tar.gz
         tar -xvf ./cc.tar.gz
 
     - name: Configure project
