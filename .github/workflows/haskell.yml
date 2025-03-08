@@ -26,7 +26,7 @@ jobs:
       with:
         ghc-version: ${{ matrix.ghc }}
 
-    - uses: actions/cache@v3
+    - uses: haskell-actions/setup@v2.7.0
       id: cache-cabal
       name: Cache Cabal artifacts
       with:
@@ -40,7 +40,7 @@ jobs:
 
     - name: Get cabal-cache
       run: |
-        curl -L https://github.com/haskell-works/cabal-cache/releases/download/v1.0.1.8/cabal-cache_x86_64_linux.tar.gz > ./cc.tar.gz
+        curl -L  https://github.com/haskell-works/cabal-cache/releases/download/v1.2.0.0/cabal-cache_x86_64_linux.tar.gz > ./cc.tar.gz
         tar -xvf ./cc.tar.gz
 
     - name: Configure project
